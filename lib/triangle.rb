@@ -10,11 +10,11 @@ class Triangle
 
   def kind
     if condition
-
+      :equilateral
     elsif condition
-
+      :isosceles
     else
-      
+      :scalene
     end
   end
 
