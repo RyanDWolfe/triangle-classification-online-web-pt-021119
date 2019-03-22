@@ -9,9 +9,10 @@ class Triangle
   end
 
   def kind
-    if [a, b, c].each {|value| value <= 0 }
-      raise TriangleError
-    elsif a == b && b == c
+    triangle_eval = [(a + b > c), (a + c > b), (b + c > a)]
+    # [a, b, c].each {|value| value <= 0 && a + b > c }
+    raise TriangleError if triangle_eval.include?(false)
+    if a == b && b == c
       :equilateral
     elsif b == c || a == c || a == b
       :isosceles
