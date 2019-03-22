@@ -11,7 +11,7 @@ class Triangle
   def kind
     if a == b && b == c
       :equilateral
-    elsif condition
+    elsif b == c && a == c
       :isosceles
     else
       :scalene
