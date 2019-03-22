@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    if 
+    if [a, b, c].each {|value| value <= 0 }
       raise TriangleError
     elsif a == b && b == c
       :equilateral
