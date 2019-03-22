@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    triangle_eval = [(a + b > c), (a + c > b), (b + c > a)]
+    triangle_eval = [(a + b > c), (a + c > b), (b + c > a)] #(a <= 0), (b <= 0), (c <= 0)
     raise TriangleError if triangle_eval.include?(false)
     if a == b && b == c
       :equilateral
@@ -19,7 +19,7 @@ class Triangle
       :scalene
     end
   end
-#(a <= 0), (b <= 0), (c <= 0)
+
   class TriangleError < StandardError
 
   end
