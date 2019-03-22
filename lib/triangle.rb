@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    if condition
+    if a == b && b == c
       :equilateral
     elsif condition
       :isosceles
